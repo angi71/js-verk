@@ -79,7 +79,7 @@ donuts.forEach(function (donut){
 
 8. Eru öll eigindi (e. properties) í sömu röð og þeim var bætt í object, rökstuddu?
 
-
+Nei, til að fá hluti í ákveðna röð þartu að nota arreys eða map().
 
 9. Útskýrðu hvað eftirfarandi kóði gerir.
 let user = { name: "John" };

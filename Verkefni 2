@@ -1,0 +1,97 @@
+1. Búðu til object með upplýsingar um þig; nafn, kennitala, heimilsfang, heimasími og gsm.
+
+let eg = {
+nafn:"Árbjartur Angi Andrésson",
+kennitala:"1711003130",
+heimilsifang:"Ystu-Garðar",
+heimasimi:"8765219",
+gsm:"8496619"
+}
+
+2. Notaðu for…in lykkjuna til að birta í console öll eigindin (e. key) ásamt gildum (e. value) í
+objectinu í lið 1.
+
+for (var lykkil in eg) {
+  console.log(lykkil, eg[lykkil]);
+} 
+
+3. Bættu við aðferð í objectið sem þú gerðir í lið 1. Aðferðin á að skila streng sem inniheldur
+nafn og aldur.
+
+eg.aldur = 18;
+eg.na = function() {return eg.nafn + eg.aldur};
+
+4. Prentaðu út með console.log() Nonni.
+let family = {
+"parents":
+{
+"fathers": [{"name":"Jakob"},{"name":"Nonni"}],
+"mothers":[{"name":"Rakel"},{"name":"Sara"}]
+}
+ };
+ 
+console.log(family.parents.fathers[1].name); 
+
+5. Leystu lið 8 í lesson 7 - Objects á Udacity
+
+var brekfast = {
+    name: "The Lumberjack",
+    price: 9.95,
+    ingredients: [eggs, sausage, hashbrowns, pancakes]
+};
+
+6. Leystu lið 9 í lesson 7 - Objects á Udacity
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    // your code goes here
+};
+
+savingsAccount.printAccountSummary = function (){
+    return "Welcome! \nYour balance is currently $" + this.balance + " and your intrest rate is " + this.interestRatePercent + "%."
+};
+console.log(savingsAccount.printAccountSummary());
+
+7. Leystu lið 12 í lesson 7 - Objects á Udacity
+var donuts = [
+    { type: "Jelly", cost: 1.22 },
+    { type: "Chocolate", cost: 2.45 },
+    { type: "Cider", cost: 1.59 },
+    { type: "Boston Cream", cost: 5.99 }
+];
+
+// your code goes here
+donuts.forEach(function (donut){
+    let text = donut.type + " donuts cost $" + donut.cost+ " each";
+    console.log(text);
+});
+
+8. Eru öll eigindi (e. properties) í sömu röð og þeim var bætt í object, rökstuddu?
+
+
+
+9. Útskýrðu hvað eftirfarandi kóði gerir.
+let user = { name: "John" };
+let admin = user;
+
+copyar objectiv user í admin.
+
+10. Afhverju virkar eftirfarandi?
+const user = {
+ name: "John"
+};
+user.age = 25;
+alert(user.age); // 25
+
+Því const festir á nafniu á object ekki gildum. 

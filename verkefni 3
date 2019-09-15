@@ -1,0 +1,29 @@
+function GeimSkip(speed) {
+  let this.speed = speed;
+  let life = 10;
+}
+function Fly(speed) {
+  let this.speed +=1;
+}
+Fly.__proto__ = Geimskip;
+
+
+
+class Geimskip {
+  constructor(speed) { 
+  this.speed = speed; 
+  this.life = 10; 
+  }
+  get fly() {
+    return this.speed;
+  }
+  set fly(x) {
+    x = this.speed +1;
+    this.speed = x;
+  }
+}
+
+let skip1 = new Geimskip(6);
+console.log(skip1.speed);
+skip1.fly;
+console.log(skip1.speed);
